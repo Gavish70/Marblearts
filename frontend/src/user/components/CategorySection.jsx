@@ -9,7 +9,7 @@ function CategorySection() {
   useEffect(() => {
 
     axios
-      .get("/categories")
+      .get("/api/categories")
       .then((res) => {
         const data = res.data.categories || res.data;
         setCategories(Array.isArray(data) ? data : []);

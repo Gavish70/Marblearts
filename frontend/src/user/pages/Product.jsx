@@ -21,7 +21,7 @@ function Product({ setLoading }) {
     if (setLoading) setLoading(true);
 
     axios
-      .get(`/products/${slug}`)
+      .get(`/api/products/${slug}`)
       .then((res) => {
         const data = res.data.products || res.data;
         setProducts(Array.isArray(data) ? data : []);
@@ -39,7 +39,7 @@ function Product({ setLoading }) {
   // get categories
   useEffect(() => {
     axios
-      .get("/categories")
+      .get("/api/categories")
       .then((res) => {
         const data = res.data.categories || res.data;
         setCategories(Array.isArray(data) ? data : []);

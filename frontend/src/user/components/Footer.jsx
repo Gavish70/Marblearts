@@ -13,7 +13,7 @@ function Footer() {
 useEffect(() => {
 
     axios
-      .get("/footer-categories")
+      .get("/api/footer-categories")
       .then((res) => {
         setCategories(Array.isArray(res.data) ? res.data : []);
       })
